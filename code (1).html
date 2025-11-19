@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pizzería Deliciosa</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+        header {
+            background-color: #ff5722;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        nav {
+            background-color: #333;
+            padding: 10px;
+            text-align: center;
+        }
+        nav a {
+            color: white;
+            margin: 0 15px;
+            text-decoration: none;
+        }
+        section {
+            padding: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .menu-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+        .menu-item {
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            padding: 15px;
+            text-align: center;
+        }
+        .menu-item img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+        }
+        .menu-item h3 {
+            margin: 10px 0;
+        }
+        .menu-item p {
+            margin: 10px 0;
+        }
+        button {
+            background-color: #ff5722;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #e64a19;
+        }
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+        @media (max-width: 768px) {
+            .menu-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Pizzería Deliciosa</h1>
+        <p>Las mejores pizzas de la ciudad</p>
+    </header>
+    <nav>
+        <a href="#menu">Menú</a>
+        <a href="#about">Sobre Nosotros</a>
+        <a href="#contact">Contacto</a>
+    </nav>
+    <section id="menu">
+        <h2>Nuestro Menú</h2>
+        <div class="menu-grid">
+            <div class="menu-item">
+                <img src="https://via.placeholder.com/250x150/ffebee/000?text=Margherita" alt="Pizza Margherita">
+                <h3>Pizza Margherita</h3>
+                <p>Tomate, mozzarella y albahaca fresca. $12</p>
+                <button onclick="addToCart('Margherita')">Agregar al Carrito</button>
+            </div>
+            <div class="menu-item">
+                <img src="https://via.placeholder.com/250x150/ffebee/000?text=Pepperoni" alt="Pizza Pepperoni">
+                <h3>Pizza Pepperoni</h3>
+                <p>Pepperoni, queso cheddar y salsa picante. $15</p>
+                <button onclick="addToCart('Pepperoni')">Agregar al Carrito</button>
+            </div>
+            <div class="menu-item">
+                <img src="https://via.placeholder.com/250x150/ffebee/000?text=Vegetariana" alt="Pizza Vegetariana">
+                <h3>Pizza Vegetariana</h3>
+                <p>Verduras frescas, queso feta y aceitunas. $14</p>
+                <button onclick="addToCart('Vegetariana')">Agregar al Carrito</button>
+            </div>
+            <div class="menu-item">
+                <img src="https://via.placeholder.com/250x150/ffebee/000?text=Cuatro+Quesos" alt="Pizza Cuatro Quesos">
+                <h3>Pizza Cuatro Quesos</h3>
+                <p>Mozzarella, gorgonzola, parmesano y provolone. $16</p>
+                <button onclick="addToCart('Cuatro Quesos')">Agregar al Carrito</button>
+            </div>
+            <div class="menu-item">
+                <img src="https://via.placeholder.com/250x150/ffebee/000?text=Hawaiana" alt="Pizza Hawaiana">
+                <h3>Pizza Hawaiana</h3>
+                <p>Jamón, piña, mozzarella y salsa de tomate. $14</p>
+                <button onclick="addToCart('Hawaiana')">Agregar al Carrito</button>
+            </div>
+            <div class="menu-item">
+                <img src="https://via.placeholder.com/250x150/ffebee/000?text=BBQ+Chicken" alt="Pizza BBQ Chicken">
+                <h3>Pizza BBQ Chicken</h3>
+                <p>Pollo a la barbacoa, cebolla, queso cheddar y salsa BBQ. $17</p>
+                <button onclick="addToCart('BBQ Chicken')">Agregar al Carrito</button>
+            </div>
+        </div>
+    </section>
+    <section id="about">
+        <h2>Sobre Nosotros</h2>
+        <p>Somos una pizzería familiar dedicada a ofrecer pizzas artesanales con ingredientes frescos y de alta calidad. ¡Ven y disfruta!</p>
+    </section>
+    <section id="contact">
+        <h2>Contacto</h2>
+        <p>Dirección: Calle Ficticia 123, Ciudad Imaginaria</p>
+        <p>Teléfono: (123) 456-7890</p>
+        <p>Email: info@pizzeriadeliciosa.com</p>
+    </section>
+    <footer>
+        <p>&copy; 2023 Pizzería Deliciosa. Todos los derechos reservados.</p>
+    </footer>
+    <script>
+        function addToCart(item) {
+            alert(item + ' agregado al carrito!');
+        }
+    </script>
+</body>
+</html>
